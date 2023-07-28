@@ -38,7 +38,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Container>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <BrowserRouter basename="https://hyunsoo-dev.github.io/climbnet/">
           <Header />
           <Wrapper>
             <Routes>
