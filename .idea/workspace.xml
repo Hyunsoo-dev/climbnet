@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a04c04e9-0441-4cb3-85a2-a8df9308c865" name="Changes" comment="Feature: homepage url 추가" />
+    <list default="true" id="a04c04e9-0441-4cb3-85a2-a8df9308c865" name="Changes" comment="." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +13,7 @@
   <component name="Git.Pull.Settings">
     <option name="OPTIONS">
       <set>
-        <option value="REBASE" />
+        <option value="NO_FF" />
       </set>
     </option>
   </component>
@@ -144,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690529312901</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary=".">
+      <created>1690535133513</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1690535133513</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +171,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Feature: 사이드 프로젝트 init" />
     <MESSAGE value="Feature: homepage url 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature: homepage url 추가" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
 </project>
