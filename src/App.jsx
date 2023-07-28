@@ -42,6 +42,7 @@ function App() {
           <Header />
           <Wrapper>
             <Routes>
+              <Route path="/" element={<WeeklyView />} />
               <Route path="/weeklyView" element={<WeeklyView />} />
               <Route
                 path="/viewFeed"
