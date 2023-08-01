@@ -39,7 +39,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Container>
         {/*<BrowserRouter basename={"https://hyunsoo-dev.github.io/climbnet"}>*/}
-          <BrowserRouter basename={"https://hyunsoo-dev.github.io/climbnet"}>
+          <BrowserRouter>
           <Header />
           <Wrapper>
             <Routes>
