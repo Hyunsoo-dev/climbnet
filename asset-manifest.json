@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/climbnet/static/css/main.bb7f42b3.css",
-    "main.js": "/climbnet/static/js/main.7f7aaf58.js",
-    "service-worker.js": "/climbnet/service-worker.js",
-    "static/media/notFound.svg": "/climbnet/static/media/notFound.e64c43d67170793bcb6c447ff70cae81.svg",
-    "static/media/iconSeeFeed.svg": "/climbnet/static/media/iconSeeFeed.d2d070cdc52453be07dc197c1ba5eb34.svg",
-    "index.html": "/climbnet/index.html",
-    "static/media/settingIcon.svg": "/climbnet/static/media/settingIcon.e489bbb83e9a60d378288089cbe36f27.svg",
-    "static/media/climbnet_logo.svg": "/climbnet/static/media/climbnet_logo.b6bc766403430086678dfc6c3e26fbc9.svg",
-    "static/media/iconSeeLocal.svg": "/climbnet/static/media/iconSeeLocal.f4b6f168233948397c94707382ee62d1.svg",
-    "static/media/iconMyArround.svg": "/climbnet/static/media/iconMyArround.27ddddf91d80fdc2fcf317bc1ea44272.svg",
-    "static/media/icon-share.svg": "/climbnet/static/media/icon-share.5ca6b090a9fc8939b69cac3658511dbb.svg",
-    "static/media/iconMyInfo.svg": "/climbnet/static/media/iconMyInfo.1479d07747dacef66a0919c85594394f.svg",
-    "static/media/iconSeeWeekly.svg": "/climbnet/static/media/iconSeeWeekly.54afd9e24aa855ffd3bb4d16a197cc68.svg",
-    "static/media/blue_label.svg": "/climbnet/static/media/blue_label.7b4ad847229c17ec579cc67f0499a4ea.svg",
-    "static/media/green_label.svg": "/climbnet/static/media/green_label.742cc00ed8db7fbd7cd22811520c5369.svg",
-    "main.bb7f42b3.css.map": "/climbnet/static/css/main.bb7f42b3.css.map",
-    "main.7f7aaf58.js.map": "/climbnet/static/js/main.7f7aaf58.js.map"
+    "main.css": "/static/css/main.bb7f42b3.css",
+    "main.js": "/static/js/main.a2f4e7a4.js",
+    "service-worker.js": "/service-worker.js",
+    "static/media/notFound.svg": "/static/media/notFound.e64c43d67170793bcb6c447ff70cae81.svg",
+    "static/media/iconSeeFeed.svg": "/static/media/iconSeeFeed.d2d070cdc52453be07dc197c1ba5eb34.svg",
+    "index.html": "/index.html",
+    "static/media/settingIcon.svg": "/static/media/settingIcon.e489bbb83e9a60d378288089cbe36f27.svg",
+    "static/media/climbnet_logo.svg": "/static/media/climbnet_logo.b6bc766403430086678dfc6c3e26fbc9.svg",
+    "static/media/iconSeeLocal.svg": "/static/media/iconSeeLocal.f4b6f168233948397c94707382ee62d1.svg",
+    "static/media/iconMyArround.svg": "/static/media/iconMyArround.27ddddf91d80fdc2fcf317bc1ea44272.svg",
+    "static/media/icon-share.svg": "/static/media/icon-share.5ca6b090a9fc8939b69cac3658511dbb.svg",
+    "static/media/iconMyInfo.svg": "/static/media/iconMyInfo.1479d07747dacef66a0919c85594394f.svg",
+    "static/media/iconSeeWeekly.svg": "/static/media/iconSeeWeekly.54afd9e24aa855ffd3bb4d16a197cc68.svg",
+    "static/media/blue_label.svg": "/static/media/blue_label.7b4ad847229c17ec579cc67f0499a4ea.svg",
+    "static/media/green_label.svg": "/static/media/green_label.742cc00ed8db7fbd7cd22811520c5369.svg",
+    "main.bb7f42b3.css.map": "/static/css/main.bb7f42b3.css.map",
+    "main.a2f4e7a4.js.map": "/static/js/main.a2f4e7a4.js.map"
   },
   "entrypoints": [
     "static/css/main.bb7f42b3.css",
-    "static/js/main.7f7aaf58.js"
+    "static/js/main.a2f4e7a4.js"
   ]
 }
