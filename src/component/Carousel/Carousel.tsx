@@ -7,18 +7,28 @@ const CarouselComponent = () => {
     <StyledCarousel
       showArrows={false}
       emulateTouch={true}
-      showIndicators={true}
+      // showIndicators={true}
       showThumbs={false}
     >
+
       <div>
-        <img src="img/testImage1.jpg" />
+        <img src="img/testImage3.jpg" alt="" />
       </div>
       <div>
-        <img src="img/testImage1.jpg" />
+        <img src="" alt="" />
       </div>
-      <div>
-        <img src="img/testImage1.jpg" />
-      </div>
+      {/*<img src="../../asset/testImage/testImage9.jpg" />*/}
+      {/*<img src="../../asset/testImage/testImage9.jpg" />*/}
+      {/*<img src="img/testImage9.jpg" />*/}
+      {/*<div>*/}
+      {/*  <img src="img/testImage5.jpg" />*/}
+      {/*</div>*/}
+      {/*<div>*/}
+      {/*  <img src="img/testImage5.jpg" />*/}
+      {/*</div>*/}
+      {/*<div>*/}
+      {/*  <img src="img/testImage5.jpg" />*/}
+      {/*</div>*/}
     </StyledCarousel>
   );
 };
