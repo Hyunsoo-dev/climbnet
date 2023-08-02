@@ -29,11 +29,11 @@ function App() {
     // window.Kakao.Link.sendScrap({
     //   requestUrl: "http://localhost:3000",
     // });
-    window.Kakao.Link.sendScrap({
-      // objectType: "feed",
-      requestUrl: "http://localhost:3000",
-      templateId: 96167,
-    });
+    // window.Kakao.Link.sendScrap({
+    //   // objectType: "feed",
+    //   requestUrl: "http://localhost:3000",
+    //   templateId: 96167,
+    // });
   };
   return (
     <QueryClientProvider client={queryClient}>
