@@ -12,7 +12,7 @@ const CarouselComponent = () => {
     >
 
       <div>
-        <img src="img/testImage3.jpg" alt="" />
+        <img src="/img/testImage2.jpg" alt="" />
       </div>
       <div>
         <img src="" alt="" />
