@@ -45,10 +45,10 @@ function App() {
             <Routes>
               <Route path="/" element={<WeeklyView />} />
               <Route path="/weeklyView" element={<WeeklyView />} />
-              <Route
-                path="/viewFeed"
-                element={<ViewFeed handleKakaoButton={handleKakaoButton} />}
-              />
+              {/*<Route*/}
+              {/*  path="/viewFeed"*/}
+              {/*  element={<ViewFeed handleKakaoButton={handleKakaoButton} />}*/}
+              {/*/>*/}
               <Route path="/viewRegion" element={<ViewRegion />} />
               <Route path="/myInfo" element={<MyInfo />} />
               <Route path="/aroundMe" element={<AroundMe />} />
