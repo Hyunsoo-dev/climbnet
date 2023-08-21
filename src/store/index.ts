@@ -6,6 +6,6 @@ interface SelectedCategoryProps {
 }
 
 export const categoryStore = create<SelectedCategoryProps>((set) => ({
-  category: "weeklyView",
+  category: "viewFeed",
   setCategory: (state) => set({ category: state }),
 }));

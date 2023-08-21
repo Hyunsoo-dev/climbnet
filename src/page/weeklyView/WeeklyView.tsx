@@ -60,7 +60,13 @@ const WeeklyView = () => {
     const daysOfWeek: string[] = ["일", "월", "화", "수", "목", "금", "토"];
     // const date: Date = new Date(`${year}-${month}-${day}`);
     const date = today;
-    const dayOfWeekIndex: number = date.getDay() + count;
+    const day = date.getDay();
+    const diff = day === 0 ? 0 : -day;
+    const dayOfWeekIndex: number = date.getDay() + count + diff;
+
+    // 2 -> 화요일
+    //
+    console.log('date.getDay: ', date.getDay(), 'count :', count);
     return daysOfWeek[dayOfWeekIndex];
   };
 

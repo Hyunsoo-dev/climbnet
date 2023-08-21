@@ -1,10 +1,13 @@
 import { Container } from "./MyInfo.styled";
-import { ReactComponent as NotFoundComponent } from "../../asset/notFound.svg";
+import { Image} from "antd";
+import { ReactComponent as NotFoundComponent } from "../../asset/notFoundFinal.svg";
 
 const MyInfo = () => {
   return (
     <Container>
-      <NotFoundComponent />
+      {/*<NotFoundComponent />*/}
+
+        <Image src="img/notFound.png" />
     </Container>
   );
 };

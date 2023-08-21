@@ -38,20 +38,21 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Container>
-        {/*<BrowserRouter basename={"https://hyunsoo-dev.github.io/climbnet"}>*/}
-          <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        {/*  <BrowserRouter>*/}
           <Header />
           <Wrapper>
             <Routes>
-              <Route path="/" element={<WeeklyView />} />
+              <Route path="/" element={<ViewFeed handleKakaoButton={handleKakaoButton} />} />
+              <Route path="/climbnetTest" element={<ViewFeed handleKakaoButton={handleKakaoButton} />} />
               <Route path="/weeklyView" element={<WeeklyView />} />
               <Route
                 path="/viewFeed"
                 element={<ViewFeed handleKakaoButton={handleKakaoButton} />}
               />
               <Route path="/viewRegion" element={<ViewRegion />} />
-              <Route path="/myInfo" element={<MyInfo />} />
               <Route path="/aroundMe" element={<AroundMe />} />
+              <Route path="/myInfo" element={<MyInfo />} />
             </Routes>
           </Wrapper>
           <Footer />
