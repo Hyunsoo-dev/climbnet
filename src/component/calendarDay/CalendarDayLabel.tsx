@@ -19,7 +19,7 @@ interface CalendarDayLabelProps {
 }
 
 const CalendarDayLabel = ({ list }: CalendarDayLabelProps) => {
-  console.log("list :", list);
+  // console.log("list :", list);
   return (
     <>
       {list?.map((item, idx) =>
