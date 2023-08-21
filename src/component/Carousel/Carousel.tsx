@@ -2,6 +2,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import { StyledCarousel } from "./Carousel.styled";
 
+const imageArray = ["img/testImage3.jpg", "img/testImage3.jpg", "img/testImage3.jpg"];
+
 const CarouselComponent = () => {
   return (
     <StyledCarousel
@@ -9,26 +11,14 @@ const CarouselComponent = () => {
       emulateTouch={true}
       // showIndicators={true}
       showThumbs={false}
+      dynamicHeight={false}
     >
+      {imageArray.map((item, idx) => (
 
-      <div>
-        <img src="img/testImage3.jpg" alt="" />
-      </div>
-      <div>
-        <img src="" alt="" />
-      </div>
-      {/*<img src="../../asset/testImage/testImage9.jpg" />*/}
-      {/*<img src="../../asset/testImage/testImage9.jpg" />*/}
-      {/*<img src="img/testImage9.jpg" />*/}
-      {/*<div>*/}
-      {/*  <img src="img/testImage5.jpg" />*/}
-      {/*</div>*/}
-      {/*<div>*/}
-      {/*  <img src="img/testImage5.jpg" />*/}
-      {/*</div>*/}
-      {/*<div>*/}
-      {/*  <img src="img/testImage5.jpg" />*/}
-      {/*</div>*/}
+            <img key={idx} src={item} />
+
+      ))}
+
     </StyledCarousel>
   );
 };
