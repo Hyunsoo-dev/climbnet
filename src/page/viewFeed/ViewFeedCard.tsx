@@ -13,7 +13,7 @@ import { ReactComponent as IconGreenLabel } from "../../asset/label/green_label.
 import { ReactComponent as SettingIcon } from "../../asset/settingIcon.svg";
 import { ReactComponent as FestivalIcon } from "../../asset/festivalIcon.svg";
 import { ReactComponent as ShareIcon } from "../../asset/icon-share.svg";
-
+// import { CopyToClipboard } from "react-copy-to-clipboard";
 interface NewsList {
   id?: number;
   type?: string;
@@ -78,6 +78,7 @@ const ViewFeedCard = ({
           <SettingIcon
             style={{ position: "absolute", zIndex: 1, bottom: 10, left: 10 }}
           />
+
           <ShareIcon
             style={{
               position: "absolute",
@@ -88,7 +89,7 @@ const ViewFeedCard = ({
             }}
             onClick={setIsOpenSharePopup}
           />
-          <CarouselComponent />
+          <CarouselComponent feedId={24} fileIds={[22]} />
           {/* <Image
             width={"312px"}
             height={"312px"}

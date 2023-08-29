@@ -1,15 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header, Footer } from "./component";
 import styled from "styled-components";
-import { WeeklyView, ViewFeed, ViewRegion, MyInfo, AroundMe } from "./page";
+import { WeeklyView, ViewFeed, ViewRegion, MyInfo, AroundMe, Login, RegisterClimingGround, RegisterFeed, AdminViewFeedCard, AdminViewFeed } from "./page";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { useScript } from "./customHook/useScript";
 import { useEffect } from "react";
+import { useLocation} from "react-router-dom";
+
 const queryClient = new QueryClient();
 
 function App() {
-  console.log("app");
+
+  // const location = useLocation();
+  console.log("app location: ", window.location.pathname);
   // kakao SDK import하기
   const status = useScript("https://developers.kakao.com/sdk/js/kakao.js");
 
@@ -38,24 +42,41 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Container>
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
-        {/*  <BrowserRouter>*/}
-          <Header />
-          <Wrapper>
-            <Routes>
-              <Route path="/" element={<ViewFeed handleKakaoButton={handleKakaoButton} />} />
-              <Route path="/climbnetTest" element={<ViewFeed handleKakaoButton={handleKakaoButton} />} />
-              <Route path="/weeklyView" element={<WeeklyView />} />
-              <Route
-                path="/viewFeed"
-                element={<ViewFeed handleKakaoButton={handleKakaoButton} />}
-              />
-              <Route path="/viewRegion" element={<ViewRegion />} />
-              <Route path="/aroundMe" element={<AroundMe />} />
-              <Route path="/myInfo" element={<MyInfo />} />
-            </Routes>
-          </Wrapper>
-          <Footer />
+        {/*<BrowserRouter basename={process.env.PUBLIC_URL}>*/}
+          <BrowserRouter>
+            {window.location.pathname === '/admin' || window.location.pathname === '/registerClimingGround' || window.location.pathname === '/registerFeed' || window.location.pathname === "/adminViewFeed"
+              ?
+                <>
+                  <Wrapper>
+                    <Routes>
+                      <Route path="/admin" element={<Login />} />
+                      <Route path="/registerClimingGround" element={<RegisterClimingGround />} />
+                      <Route path="/registerFeed" element={<RegisterFeed />} />
+                        <Route path="/adminViewFeed" element={<AdminViewFeed />} />
+                    </Routes>
+                  </Wrapper>
+                </>
+                :
+                <>
+                <Header />
+                  <Wrapper>
+                  <Routes>
+                    <Route path="/" element={<ViewFeed handleKakaoButton={handleKakaoButton} />} />
+                    <Route path="/climbnetTest" element={<ViewFeed handleKakaoButton={handleKakaoButton} />} />
+                    <Route path="/weeklyView" element={<WeeklyView />} />
+                    <Route
+                    path="/viewFeed"
+                    element={<ViewFeed handleKakaoButton={handleKakaoButton} />}
+                    />
+                    <Route path="/viewRegion" element={<ViewRegion />} />
+                    <Route path="/aroundMe" element={<AroundMe />} />
+                    <Route path="/myInfo" element={<MyInfo />} />
+
+                  </Routes>
+                  </Wrapper>
+                <Footer />
+                </>
+            }
         </BrowserRouter>
       </Container>
       <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />
