@@ -69,8 +69,8 @@ const Footer = () => {
         </StyledButton>
       </StyledLink>
       <StyledLink
-        to="arroundMe"
-        id="arroundMe"
+        to="aroundMe"
+        id="aroundMe"
         $active={clickedMenu === "4"}
         onClick={(event: SyntheticEvent) => onClickMenu(event, "4")}
       >

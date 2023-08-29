@@ -7,7 +7,7 @@ enum CategoryName {
   VIEW_FEED = "피드보기",
   VIEW_REGION = "지역보기",
   MY_INFO = "내주변",
-  ARROUND_ME = "내정보",
+  AROUND_ME = "내정보",
 }
 const Header = () => {
   const category = categoryStore((state) => state.category);
@@ -23,11 +23,12 @@ const Header = () => {
     case "viewRegion":
       parsedCategory = CategoryName.VIEW_REGION;
       break;
-    case "arroundMe":
-      parsedCategory = CategoryName.MY_INFO;
+    case "aroundMe":
+      parsedCategory = CategoryName.AROUND_ME;
       break;
     case "myInfo":
-      parsedCategory = CategoryName.ARROUND_ME;
+
+      parsedCategory = CategoryName.MY_INFO;
       break;
   }
   // 주별보기

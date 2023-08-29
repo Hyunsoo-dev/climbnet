@@ -5,7 +5,7 @@ import {
   CardFooter,
   FooterTitleWrapper,
   FooterInfoWrapper,
-} from "./ViewFeedCard.styled";
+} from "./AdminViewFeedCard.styled";
 import { Image } from "antd";
 import { CarouselComponent } from "../../component";
 import { ReactComponent as IconBlueLabel } from "../../asset/label/blue_label.svg";
@@ -36,19 +36,37 @@ interface MockDataProps {
   };
 }
 
-const ViewFeedCard = ({
+interface ClimingGroundInfoProps {
+  feedId: number;
+  placeName?: string;
+  placeBranch?: string;
+  fileIds: number[];
+  eventType?: string;
+  startDate?: string;
+  startTime?: string;
+  endDate?: string;
+  endTime?: string;
+
+}
+
+const AdminViewFeedCard = ({
   item,
   setIsOpenSharePopup,
   handleKakaoButton,
 }: {
-  item: MockDataProps;
+  item: ClimingGroundInfoProps;
   setIsOpenSharePopup?: Dispatch<SetStateAction<boolean>>;
   handleKakaoButton: any;
 }) => {
   const cardRef = useRef<HTMLLIElement>(null);
+  // const [feedId, setFeedId] = useState<number>(0);
+  // const [fileIds, setFileIds] = useState<number[]>([]);
 
+  console.log('AdminViewFeedCard item: ', item);
   useEffect(() => {
-    // console.log("view feed card useEffect");
+    console.log("admin view feed card useEffect: ", "feedId: ", item.feedId, "fileId: ", item.fileIds);
+    // setFeedId(item.feedId);
+    // setFileIds([...fileIds, ...item.fileIds]);
   }, []);
 
   const openSharePopup = () => {};
@@ -75,21 +93,25 @@ const ViewFeedCard = ({
             height: "328px",
           }}
         >
-          <SettingIcon
-            style={{ position: "absolute", zIndex: 1, bottom: 10, left: 10 }}
-          />
+          {item.eventType === "S" && (
+              <SettingIcon
+                  style={{ position: "absolute", zIndex: 1, bottom: 10, left: 10 }}
+              />
+          )}
 
-          <ShareIcon
-            style={{
-              position: "absolute",
-              zIndex: 1,
-              top: 10,
-              right: 10,
-              cursor: "pointer",
-            }}
-            onClick={setIsOpenSharePopup}
-          />
-          <CarouselComponent feedId={24} fileIds={[22]} />
+
+
+          {/*<ShareIcon*/}
+          {/*  style={{*/}
+          {/*    position: "absolute",*/}
+          {/*    zIndex: 1,*/}
+          {/*    top: 10,*/}
+          {/*    right: 10,*/}
+          {/*    cursor: "pointer",*/}
+          {/*  }}*/}
+          {/*  onClick={setIsOpenSharePopup}*/}
+          {/*/>*/}
+          <CarouselComponent feedId={item.feedId} fileIds={item.fileIds}/>
           {/* <Image
             width={"312px"}
             height={"312px"}
@@ -103,12 +125,12 @@ const ViewFeedCard = ({
             <span>
               <IconBlueLabel />
             </span>
-            <span>암장 지점명 16px</span>
+            <span>{item.placeName}</span>
           </FooterTitleWrapper>
           <FooterInfoWrapper>
             <div>
               <span>일시:</span>
-              <span>YYYY.MM.DD(화) ~ YYYY.MM.DD(수)</span>
+              <span>{`${item.startDate}`} ~ ${item.endDate}</span>
             </div>
             <div>
               <span>대상:</span>
@@ -121,4 +143,4 @@ const ViewFeedCard = ({
   );
 };
 
-export default ViewFeedCard;
+export default AdminViewFeedCard;

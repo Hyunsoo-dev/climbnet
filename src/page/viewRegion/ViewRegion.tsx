@@ -4,7 +4,8 @@ import { ReactComponent as NotFoundComponent } from "../../asset/notFound.svg";
 const ViewRegion = () => {
   return (
     <Container>
-      <NotFoundComponent />
+      {/*<NotFoundComponent />*/}
+        <Image src="img/notFound.png" />
     </Container>
   );
 };

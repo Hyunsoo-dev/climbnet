@@ -3,5 +3,9 @@ import ViewFeed from "./viewFeed/ViewFeed";
 import ViewRegion from "./viewRegion/ViewRegion";
 import MyInfo from "./myInfo/MyInfo";
 import AroundMe from "./aroundMe/AroundMe";
-
-export { WeeklyView, ViewFeed, ViewRegion, MyInfo, AroundMe };
+import Login from "./admin/Login";
+import RegisterClimingGround from "./admin/RegisterClimingGround";
+import RegisterFeed from "./admin/RegisterFeed";
+import AdminViewFeedCard from "./admin/AdminViewFeedCard";
+import AdminViewFeed from "./admin/AdminViewFeed";
+export { WeeklyView, ViewFeed, ViewRegion, MyInfo, AroundMe, Login, RegisterClimingGround, RegisterFeed, AdminViewFeed, AdminViewFeedCard };

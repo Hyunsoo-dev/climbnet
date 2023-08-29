@@ -7,6 +7,7 @@ const WeeklyView = () => {
   const [selectedWeekNumber, setSelectedWeekNumber] = useState<number>(2);
   const isMouseDownRef = useRef<boolean>();
   const changeWeekRef = useRef<boolean>(false);
+  const diffXRef = useRef<number>(0);
 
   const [startCoordination, setStartCoordination] = useState({ x: 0, y: 0 });
   const [endCoordination, setEndCoordination] = useState({ x: 0, y: 0 });
@@ -27,32 +28,32 @@ const WeeklyView = () => {
   const handleMouseMove = (event: any) => {
     const { offsetX, offsetY } = event.nativeEvent;
     const diffX = offsetX - startCoordination.x;
-    const currentDate = today.getDate();
-    const diff = 7;
+    diffXRef.current = offsetX - startCoordination.x;
 
-    if (!changeWeekRef.current && diffX > 30) {
-      setSelectedWeekNumber(selectedWeekNumber + 1);
-      changeWeekRef.current = true;
-      today.setDate(currentDate + diff);
-      setToday(today);
-    }
-
-    if (!changeWeekRef.current && diffX < -30) {
-      setSelectedWeekNumber(selectedWeekNumber - 1);
-      changeWeekRef.current = true;
-      today.setDate(currentDate - diff);
-      setToday(today);
-    }
   };
 
   const handleMouseUp = (event: any) => {
-    console.log("handleMouseUp");
     isMouseDownRef.current = false;
     changeWeekRef.current = false;
     setEndCoordination({
       x: event.nativeEvent.offsetX,
       y: event.nativeEvent.offsetY,
     });
+
+    const currentDate = today.getDate();
+    const diff = 7;
+    if (diffXRef.current < -15) {
+      setSelectedWeekNumber(selectedWeekNumber + 1);
+      today.setDate(currentDate + diff);
+      setToday(today);
+    }
+
+    if (diffXRef.current > 15) {
+      setSelectedWeekNumber(selectedWeekNumber - 1);
+      today.setDate(currentDate - diff);
+      setToday(today);
+    }
+
   };
 
   const getDayOfWeek = (count: any): string => {
@@ -60,11 +61,17 @@ const WeeklyView = () => {
     const daysOfWeek: string[] = ["일", "월", "화", "수", "목", "금", "토"];
     // const date: Date = new Date(`${year}-${month}-${day}`);
     const date = today;
-    const dayOfWeekIndex: number = date.getDay() + count;
+    const day = date.getDay();
+    const diff = day === 0 ? 0 : -day;
+    const dayOfWeekIndex: number = date.getDay() + count + diff;
+
+    // 2 -> 화요일
+    //
+
     return daysOfWeek[dayOfWeekIndex];
   };
 
-  console.log("getDayOfWeek :", getDayOfWeek(0));
+
   function getFirstDayOfWeek(date: any, count: any) {
     const day = date.getDay(); // 주어진 날짜의 요일 (0: 일요일, 1: 월요일, ..., 6: 토요일)
 
