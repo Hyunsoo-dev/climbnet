@@ -51,7 +51,7 @@ const CarouselComponent = ({ feedId, fileIds }: { feedId: number, fileIds: numbe
   console.log('CarouselComponent imageList: ', imageList);
 
   return (
-    <StyledCarousel
+    <Carousel
       showArrows={false}
       emulateTouch={true}
       // showIndicators={true}
@@ -72,7 +72,7 @@ const CarouselComponent = ({ feedId, fileIds }: { feedId: number, fileIds: numbe
 
       {/*))}*/}
 
-    </StyledCarousel>
+    </Carousel>
   );
 };
 
